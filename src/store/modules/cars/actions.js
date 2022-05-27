@@ -1,4 +1,6 @@
 import { carService } from "../../../services";
+import state from "./state";
+
 const actions = {
   async getCarList(vuexContext) {
     const res = await carService.carList();
@@ -6,7 +8,18 @@ const actions = {
     return res.data;
   },
   async setCarCart(vuexContext, data) {
-    vuexContext.commit("SET_CAR_CART", data);
+    if (state.carCart.filter((car) => car.id == data.id).length == 0) {
+      vuexContext.commit("SET_CAR_CART", data);
+      return {
+        ...data,
+        success: true,
+      };
+    } else {
+      return {
+        ...data,
+        success: false,
+      };
+    }
   },
   async setCarDetail(vuexContext, data) {
     const res = await carService.carDetail(data);

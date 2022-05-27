@@ -39,8 +39,14 @@ export default {
     async carList() {
       await this.getCarList();
     },
-    onSetCart(item) {
-      this.setCarCart(item);
+    async onSetCart(item) {
+      const res = await this.setCarCart(item);
+      if (res.success) {
+        this.$toasted.success("Araç sepete eklendi!", {
+          position: "top-right",
+          duration: 2000,
+        });
+      }
     },
     onCarDetail(item) {
       this.$router.push({ name: "Detail", params: { id: item.id } });
