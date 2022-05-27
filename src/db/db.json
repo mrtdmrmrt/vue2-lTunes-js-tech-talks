@@ -1,0 +1,44 @@
+{
+  "login": {
+    "userName": "jstechtalks",
+    "password": "123456"
+  },
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Nissan",
+      "model": "Juke",
+      "year": "2020",
+      "km": "11.750",
+      "price": "663.000",
+      "photo": "https://images.dod.com.tr/1337296_1_320x240.jpg"
+    },
+    {
+      "id": 2,
+      "brand": "Volkswagen",
+      "model": "Golf",
+      "year": "2018",
+      "km": "15.750",
+      "price": "724.000",
+      "photo": "https://images.dod.com.tr/1273734_1_320x240.jpg"
+    },
+    {
+      "id": 3,
+      "brand": "Kia",
+      "model": "Sportage",
+      "year": "2019",
+      "km": "14.910",
+      "price": "731.000",
+      "photo": "https://images.dod.com.tr/1277802_1_320x240.jpg"
+    },
+    {
+      "id": 4,
+      "brand": "Dacia",
+      "model": "Sandero",
+      "year": "2019",
+      "km": "24.910",
+      "price": "371.000",
+      "photo": "https://images.dod.com.tr/1373633_1_320x240.jpg"
+    }
+  ]
+}
