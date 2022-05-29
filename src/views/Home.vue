@@ -26,6 +26,11 @@ export default {
     ...mapGetters({
       gettersCarList: "cars/gettersCarList",
     }),
+    /*
+    gettersCarList(){
+      return this.$store.getters["cars/gettersCarList"]
+    }
+    */
   },
   mounted() {
     this.carList();
@@ -37,6 +42,8 @@ export default {
       setCarCartDelete: "cars/setCarCartDelete",
     }),
     async carList() {
+      //this.$store.dispatch('cars/getCarList')
+      //this.$store.dispatch('cars/getCarList',example)
       await this.getCarList();
     },
     async onSetCart(item) {
@@ -49,6 +56,7 @@ export default {
       }
     },
     onCarDetail(item) {
+      // this.$router.push({ name: 'Detail', query: { id: item.id }})
       this.$router.push({ name: "Detail", params: { id: item.id } });
     },
     onDeleteCarCart(item) {

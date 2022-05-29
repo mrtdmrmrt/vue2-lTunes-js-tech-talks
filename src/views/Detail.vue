@@ -19,6 +19,7 @@ export default {
     }),
   },
   mounted() {
+    // this.$route.query.id
     this.carDetail(this.$route.params.id);
   },
   methods: {
