@@ -29,5 +29,10 @@ const actions = {
   async setCarCartDelete(vuexContext, data) {
     vuexContext.commit("SET_CAR_CART_DELETE", data);
   },
+  async setCarRez(vuexContext, data) {
+    const res = await carService.carRez(data);
+    vuexContext.commit("SET_CAR_REZ", res.data);
+    return res;
+  },
 };
 export default actions;

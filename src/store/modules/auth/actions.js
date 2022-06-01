@@ -6,7 +6,7 @@ const actions = {
       data.userName == res.data.userName &&
       data.password == res.data.password
     ) {
-      vuexContext.commit("SET_LOGIN", res);
+      vuexContext.commit("SET_LOGIN", res.data);
       return {
         ...res.data,
         success: true,

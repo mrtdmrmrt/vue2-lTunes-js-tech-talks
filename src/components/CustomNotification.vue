@@ -30,6 +30,9 @@
         </div>
       </div>
     </div>
+    <div class="custom-notification__footer">
+      <a @click="onReservationClick">Rezervasyona Git</a>
+    </div>
   </div>
 </template>
 
@@ -63,6 +66,9 @@ export default {
     deleteCarCart(item) {
       this.$emit("on-delete-car-cart", item);
     },
+    onReservationClick() {
+      this.$emit("on-reservation-click");
+    },
   },
   beforeMount() {
     document.addEventListener("click", this.clickOutSide);
@@ -78,7 +84,7 @@ export default {
   cursor: default;
   position: absolute;
   width: 352px;
-  height: 165px;
+  height: 186px;
   right: 30px;
   top: 58px;
 
@@ -93,5 +99,17 @@ export default {
 .custom-notification__contents {
   height: 130px;
   overflow-y: auto;
+}
+.custom-notification__footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.custom-notification__footer a {
+  cursor: pointer;
+}
+.custom-notification__footer a:hover {
+  text-decoration: underline !important;
 }
 </style>

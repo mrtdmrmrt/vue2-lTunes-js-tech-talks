@@ -8,5 +8,8 @@ const getters = {
   gettersCarDetail(state) {
     return state.carDetail;
   },
+  gettersCarRez(state) {
+    return state.carRez;
+  },
 };
 export default getters;

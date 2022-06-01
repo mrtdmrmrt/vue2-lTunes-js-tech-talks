@@ -25,6 +25,7 @@
           :notificationList="gettersCarCart"
           @close="showNotification = $event"
           @on-delete-car-cart="onDeleteCarCart($event)"
+          @on-reservation-click="onReservationClick"
         />
       </transition>
     </div>
@@ -52,6 +53,9 @@ export default {
   methods: {
     onDeleteCarCart(item) {
       this.$emit("on-delete-car-cart", item);
+    },
+    onReservationClick() {
+      this.$router.push("/reservation");
     },
   },
 };
